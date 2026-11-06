@@ -1,0 +1,12 @@
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.orbit{animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(346deg) scaleY(.62)}}
+.chip{animation:float 6s ease-in-out infinite}
+.chip--b{animation-delay:-2s}.chip--c{animation-delay:-4s}
+@keyframes float{50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
