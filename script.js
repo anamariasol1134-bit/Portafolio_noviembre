@@ -69,12 +69,21 @@
           _template: 'table'
         })
       });
-      const data = await res.json();
-      if (!res.ok || data.success === 'false' || data.success === false) throw new Error('fail');
+      let data = {};
+      try { data = await res.json(); } catch (_) {}
+      if (!res.ok || data.success === 'false' || data.success === false) {
+        console.error('FormSubmit respondió:', res.status, data);
+        throw new Error(data.message || 'fail');
+      }
       f.reset();
       say('¡Mensaje enviado! Gracias por escribirme, te responderé pronto.', 'ok');
     } catch (err) {
-      say('No se pudo enviar el mensaje. Inténtalo de nuevo o escríbeme a anamariasol1134@gmail.com.', 'err');
+      console.error('Error al enviar:', err);
+      if (/activat|activa/i.test(err.message)) {
+        say('Casi listo: revisa tu correo (y spam) y confirma la activación del formulario. Después vuelve a enviar.', 'err');
+      } else {
+        say('No se pudo enviar el mensaje. Inténtalo de nuevo o escríbeme a anamariasol1134@gmail.com.', 'err');
+      }
     } finally {
       btn.disabled = false; btn.textContent = 'Enviar mensaje';
     }

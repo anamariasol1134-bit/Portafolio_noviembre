@@ -188,3 +188,4 @@ h1{font-size:clamp(2.5rem,5.6vw,4.6rem);font-weight:700}
 
 .form__note.ok{color:#4ade80}.form__note.err{color:#f87171}.form button:disabled{opacity:.6;cursor:wait;transform:none}
 .form{position:relative}
+.form input:-webkit-autofill{-webkit-text-fill-color:var(--text);box-shadow:0 0 0 100px var(--bg) inset;caret-color:var(--text)}
