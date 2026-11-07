@@ -9,14 +9,11 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ana Suárez · Software Developer & Automation">
 <meta property="og:description" content="Construyo soluciones digitales para problemas reales.">
-<meta property="og:image" content="assets/images/og.jpg">
-<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/animations.css">
-<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -62,7 +59,7 @@
 <section class="section" id="sobre-mi">
   <div class="wrap about">
     <figure class="photo reveal">
-      <img src="assets/images/ana.jpg" alt="Retrato profesional de Ana Suárez" width="800" height="800" loading="lazy">
+      <img src="ana.jpg" alt="Retrato profesional de Ana Suárez" width="800" height="800" loading="lazy">
     </figure>
     <div class="about__text reveal">
       <p class="label mono">Sobre mí</p>
@@ -189,6 +186,7 @@
       <input id="correo" name="correo" type="email" placeholder="tucorreo@ejemplo.com" required autocomplete="email">
       <label for="mensaje">Mensaje</label>
       <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
       <button type="submit">Enviar mensaje</button>
       <p class="form__note" id="form-note" aria-live="polite"></p>
     </form>
@@ -209,8 +207,6 @@
   </div>
 </footer>
 
-<script src="js/navigation.js" defer></script>
-<script src="js/animations.js" defer></script>
-<script src="js/main.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>
